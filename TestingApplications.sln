@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_SourceProject", "CS_Sour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSTest_CS_SourceApp", "MSTest_CS_SourceApp\MSTest_CS_SourceApp.csproj", "{657B6C8E-FEC0-4E99-B598-780D4899C47B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_SourceProject.Tests", "CS_SourceProject.Tests\CS_SourceProject.Tests.csproj", "{67AC3163-50D6-425B-91D7-34208E2D548E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{657B6C8E-FEC0-4E99-B598-780D4899C47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{657B6C8E-FEC0-4E99-B598-780D4899C47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{657B6C8E-FEC0-4E99-B598-780D4899C47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67AC3163-50D6-425B-91D7-34208E2D548E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67AC3163-50D6-425B-91D7-34208E2D548E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67AC3163-50D6-425B-91D7-34208E2D548E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67AC3163-50D6-425B-91D7-34208E2D548E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
