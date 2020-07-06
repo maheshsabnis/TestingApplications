@@ -8,8 +8,18 @@ namespace CS_SourceProject
 {
     public class Program
     {
+        public static List<string> lstGlobal = new List<string>();  
         public static void Main()
         {
+
+            Banking b = new Banking(20000);
+            // Subscribing to the Notification from Bank
+            EventListener evt = new EventListener(b);
+            b.Deposit(90000);
+            Console.WriteLine($"Net Balance after deposit {b.ShowBalance()}");
+            b.Withdrawal(108000);
+            Console.WriteLine($"Net Balance afeter withdrawal {b.ShowBalance()}");
+
             Console.WriteLine("Hello World");
         }
 
@@ -36,6 +46,11 @@ namespace CS_SourceProject
         {
             if (x < 0) return false;
             return true;
+        }
+
+        public static void AddListData(string name)
+        {
+            lstGlobal.Add(name);
         }
     }
 

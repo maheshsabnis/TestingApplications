@@ -117,5 +117,13 @@ namespace MSTest_CS_SourceApp
             var actual = CS_SourceProject.Program.PositiveValue(x);
             Assert.IsFalse(actual, "Value is Negative");
         }
+
+        [TestMethod]
+        public void AddListDataVoidMethodTest()
+        {
+            string name = "Mahesh";
+            CS_SourceProject.Program.AddListData(name);
+            CollectionAssert.Contains(CS_SourceProject.Program.lstGlobal, name);
+        }
     }
 }
