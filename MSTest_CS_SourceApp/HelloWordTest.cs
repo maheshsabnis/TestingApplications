@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using CS_SourceProject;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MSTest_CS_SourceApp
@@ -125,5 +126,22 @@ namespace MSTest_CS_SourceApp
             CS_SourceProject.Program.AddListData(name);
             CollectionAssert.Contains(CS_SourceProject.Program.lstGlobal, name);
         }
+
+        [TestMethod]
+        public void EventTestMethod()
+        {
+            CS_SourceProject.Banking bank = new CS_SourceProject.Banking(20000);
+            List<string> events = new List<string>();
+            bank.OverBalance += delegate (int amount)
+            {
+                events.Add("OverBalance");
+            };
+
+            bank.Deposit(100000);
+            Assert.AreEqual("OverBalance", events[0]);
+            
+        }
+
+        
     }
 }
