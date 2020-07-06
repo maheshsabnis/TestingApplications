@@ -31,6 +31,12 @@ namespace CS_SourceProject
             }
             return x / y;
         }
+
+        public static bool PositiveValue(int x)
+        {
+            if (x < 0) return false;
+            return true;
+        }
     }
 
 

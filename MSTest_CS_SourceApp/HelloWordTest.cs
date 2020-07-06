@@ -99,5 +99,23 @@ namespace MSTest_CS_SourceApp
             CS_SourceProject.Program.Divide(4, 0));
             Assert.AreEqual("Denominator cannot be zero 0", ex.Message);
         }
+
+        [DataTestMethod]
+        [DataRow(10,20)]
+        //[DataRow(-10, 20)]
+        //[DataRow(10, -20)]
+        public void AddTestData(int x,int y)
+        {
+            var res = CS_SourceProject.Program.Add(x, y);
+            Assert.AreEqual(30, res);
+        }
+
+        [TestMethod]
+        public void BooleanTest()
+        {
+            int x = -9;
+            var actual = CS_SourceProject.Program.PositiveValue(x);
+            Assert.IsFalse(actual, "Value is Negative");
+        }
     }
 }
