@@ -142,6 +142,37 @@ namespace MSTest_CS_SourceApp
             
         }
 
+        private TestContext context;
+
+        public TestContext TestContext
+        {
+            get { return context; }
+            set { context = value; }
+        }
+
+
+        [TestMethod]
+        //[DeploymentItem("MSTest_CS_SourceApp\\DataSOurce.xlsx")]
+        //[DataSource("MyExcelDataSource")]
+        //[DeploymentItem("DataSOurce.xlsx")]
+        //[DataSource("System.Data.Odbc", @"Dsn=Excel Files;dbq=.\DataSOurce.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5", "Sheet1$", DataAccessMethod.Sequential)]
         
+  //      [DataSource("System.Data.SqlClient",
+  //"Server=Localhost;Database = AppDbApi;Integrated Security = SSPI",
+  //"DataSource",
+  //DataAccessMethod.Sequential)]
+        public void AddDataSourceTest()
+        {
+            // arrange
+            // Access the data
+            int x = Convert.ToInt32(TestContext.DataRow["Num1"]);
+            int y = Convert.ToInt32(TestContext.DataRow["Num2"]);
+            int expected = Convert.ToInt32(TestContext.DataRow["Result"]);
+            // act
+            int actual = CS_SourceProject.Program.Add(x, y);
+            // assert
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
